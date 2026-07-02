@@ -1,0 +1,4 @@
+project_id = "kkohqumukivprzjkkofn"
+
+[functions.public-rollups]
+verify_jwt = false

@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Zinc-based neutral palette — light mode */
+    --background: 0 0% 98.5%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 6% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 6% 10%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+
+    --accent: 240 5% 96%;
+    --accent-foreground: 240 6% 10%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 240 6% 10%;
+
+    --radius: 0.625rem;
+
+    /* Status colors */
+    --status-green: 142 71% 38%;
+    --status-yellow: 38 92% 46%;
+    --status-red: 0 72% 51%;
+
+    /* Department colors */
+    --dept-ops: 221 83% 53%;
+    --dept-l1: 262 60% 55%;
+    --dept-l2: 190 80% 42%;
+    --dept-l3: 330 65% 50%;
+    --dept-sales: 25 95% 53%;
+    --dept-events: 142 55% 42%;
+    --dept-cs: 45 93% 47%;
+
+    /* Sidebar — always dark regardless of mode */
+    --sidebar-background: 240 10% 4%;
+    --sidebar-foreground: 240 5% 60%;
+    --sidebar-primary: 0 0% 98%;
+    --sidebar-primary-foreground: 240 10% 4%;
+    --sidebar-accent: 240 4% 14%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 4% 12%;
+    --sidebar-ring: 240 5% 60%;
+  }
+
+  .dark {
+    --background: 240 10% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 6% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 6% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 6% 10%;
+
+    --secondary: 240 4% 14%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 4% 14%;
+    --muted-foreground: 240 5% 60%;
+
+    --accent: 240 4% 14%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 4% 14%;
+    --input: 240 4% 14%;
+    --ring: 240 5% 60%;
+
+    /* Sidebar — stays dark, same as light mode */
+    --sidebar-background: 240 10% 3%;
+    --sidebar-foreground: 240 5% 60%;
+    --sidebar-primary: 0 0% 98%;
+    --sidebar-primary-foreground: 240 10% 4%;
+    --sidebar-accent: 240 4% 14%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 4% 10%;
+    --sidebar-ring: 240 5% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+}
+
+@layer components {
+  .status-green {
+    background-color: hsl(var(--status-green));
+  }
+  .status-yellow {
+    background-color: hsl(var(--status-yellow));
+  }
+  .status-red {
+    background-color: hsl(var(--status-red));
+  }
+}
