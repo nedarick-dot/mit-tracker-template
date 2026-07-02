@@ -218,9 +218,7 @@ Automated Slack check-ins send a weekly DM to each team lead asking for their MI
 2. Storing the Slack bot token as a secret in Supabase (not in Vite env vars — it runs server-side in a Supabase Edge Function).
 3. Scheduling the edge function via a Supabase cron job or an external scheduler.
 
-This is more involved than the core setup and is covered separately. See **SLACK_SETUP.md** — coming soon.
-
-If you want Slack check-ins before that guide is ready, open a GitHub issue on the template repo and we'll prioritize it.
+The full walkthrough is in **[SLACK_SETUP.md](SLACK_SETUP.md)** — it covers creating the Slack app, setting secrets, deploying the edge functions, configuring the cron schedule, and testing end to end. About 30 minutes start to finish.
 
 ---
 
